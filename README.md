@@ -43,6 +43,4 @@ Campaigns will be created by project leaders, tree health status updated by part
 React,
 Parcel,
 SAAS,
-Axios.# green-roots-front-end
-# green-roots-front-end
-# green-roots-front-end
+Axios.
