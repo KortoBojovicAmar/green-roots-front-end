@@ -1,0 +1,19 @@
+.card-grid {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+
+    
+    @media (min-width: 679px) {
+        max-width: 70rem;
+        margin: 1rem 1rem 1rem 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+    @media (min-width: 1000px) {
+        max-width: 70rem;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}

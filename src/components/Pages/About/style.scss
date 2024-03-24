@@ -1,0 +1,125 @@
+
+
+.about-page {
+  max-width: 70rem;
+
+
+  h2 {
+    color: #045d58;
+    font-family: 'Norwester', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  // Paragraphe de contenu
+  p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    word-spacing: -1px; // Resserre l'espace entre les mots
+  }
+}
+
+.about-section {
+  max-width: 200rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  // Alternance des images et des textes
+  .text,
+  .image {
+    flex: 1 1 50%; // Diviser l'espace en deux pour chaque élément
+    padding: 0 10px; // Ajouter un espace entre les éléments
+  }
+
+  // Inverser l'ordre pour les sections impaires
+  &:nth-child(odd) {
+    .image {
+      order: -1;
+    }
+  }
+    
+  // Styles pour la section de texte
+  .text {
+    flex: 1;
+  }
+  
+  // Styles pour l'image
+  .image {
+    flex: 1;
+    
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 100%;
+      // object-fit: cover;
+      transition: transform 1.5s;
+    }
+  }
+}
+
+.about-title {
+  background-image: linear-gradient(to top, #F4F4F4, #3c6b45);
+  padding-bottom: 200px;
+  width: 100%;
+
+  // Titre principal
+  h1 {
+    // color: #f7c0b9;
+    color: #F4F4F4;
+    font-size: 4rem;
+    padding-top: 45px;
+    padding-left: 35px;
+    text-align: center;
+  }
+}
+
+// @media (min-width: 678px) {
+//   .about-page {
+//     .about-section {
+//       flex-direction: row; // Revenir à la disposition en ligne pour les éléments sur les grands écrans
+//       justify-content: space-between; // Espace les éléments horizontalement
+//     }
+//   }
+// }
+
+@media (max-width: 678px) {
+  .about-section {
+    flex-direction: column; // Affiche les éléments en colonne sur les petits écrans
+  }
+
+  .about-section .text,
+  .about-section .image {
+    flex: 1; // Les éléments prennent toute la largeur disponible
+    width: 100%; // Les éléments occupent toute la largeur de leur conteneur
+    margin-bottom: 20px; // Espacement entre les éléments
+  }
+
+  .about-section .image {
+    order: 2; // Met les images après les textes dans l'ordre visuel
+  }
+}
+
+@media (min-width: 678px) {
+  .about-section {
+    display: flex; // Utiliser la flexbox pour la disposition
+    justify-content: space-between; // Espacer les éléments horizontalement
+    align-items: center; // Centrer verticalement les éléments
+    width: 100%;
+  }
+
+  .about-section .text,
+  .about-section .image {
+    flex: 1; // Les éléments prennent la moitié de la largeur
+    width: 50%; // Les éléments occupent 50% de la largeur de leur conteneur
+  }
+
+  .about-section .image {
+    margin-left: auto; // Aligner les images à droite
+  }
+}

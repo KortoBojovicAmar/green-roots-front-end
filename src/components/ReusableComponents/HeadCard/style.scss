@@ -1,0 +1,105 @@
+@use '../../../variables';
+
+@media (min-width: 678px) {
+
+    
+    .headcard {
+        .light {
+
+            p {
+                color: variables.$lighttheme-green-dark;
+                padding: 0 1rem 0 1rem;
+            }
+        }
+        
+        .dark {
+            h1 {
+                color:variables.$darktheme-blue;
+            }
+        }
+        width: 100%;
+        img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
+        
+        .container {
+            width: 100%;
+            flex-direction: column;
+            padding: 1rem 0 2rem 0;
+            text-align: center;
+    
+            h1 {
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+
+    }}}
+
+    
+@media (max-width: 431px){
+    .headcard {
+        width: 100%;
+        height:20rem;
+        img {
+        width: 100%;
+
+        }
+    }
+}
+
+@media (max-width: 678px){
+    .headcard {
+        width: 100%;
+        height:25rem;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+        }
+        
+        
+        
+        .container {
+            position: relative;
+            bottom: 3rem;
+            left: 50%;
+            transform: translate(-50%, 0); // placer le container au centre avec les axes (x,y)
+            display: flex;
+            flex-direction: column;
+            
+            background: linear-gradient(to bottom, rgba(214, 214, 214, 0), variables.$lighttheme-green-dark, variables.$lighttheme-green-dark, variables.$lighttheme-green-dark);
+            width: 100%;
+            padding: 1rem 0 2rem 0;
+            
+            h1 {
+                color: rgb(255, 255, 255);
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                text-align: center;
+                padding-bottom: 0.5rem;
+                font-size: 2rem;
+            }
+
+            h2 {
+                padding: 1.5rem;
+                font-family: Norwester;
+                font-size: larger;
+                color: variables.$lighttheme-brown-dark;
+            }
+
+            p {
+                color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 0 1rem 0 1rem;
+            }
+            
+    }}
+}
+
+
+

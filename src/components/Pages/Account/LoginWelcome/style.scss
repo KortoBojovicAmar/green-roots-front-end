@@ -1,0 +1,19 @@
+.welcome-container {
+
+    text-align: center;
+    
+
+    h1 {
+        position: relative;
+        margin: 5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.4rem;
+
+        img {
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
